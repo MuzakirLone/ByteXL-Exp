@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Banking UI</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #4a90e2, #007aff);
+    }
+
+    .container {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    .balance {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+
+    input[type="number"] {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    button {
+      flex: 1;
+      padding: 0.8rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .deposit {
+      background-color: #28a745;
+    }
+
+    .withdraw {
+      background-color: #dc3545;
+    }
+
+    .deposit:hover {
+      background-color: #218838;
+    }
+
+    .withdraw:hover {
+      background-color: #c82333;
+    }
+
+    @media (max-width: 500px) {
+      .buttons {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="balance" id="balance">$0.00</div>
+    <input type="number" id="amount" placeholder="Enter amount" min="0">
+    <div class="buttons">
+      <button class="deposit" onclick="deposit()">Deposit</button>
+      <button class="withdraw" onclick="withdraw()">Withdraw</button>
+    </div>
+  </div>
+
+  <script>
+    let currentBalance = 0;
+
+    function updateBalance() {
+      document.getElementById('balance').textContent = `$${currentBalance.toFixed(2)}`;
+    }
+
+    function deposit() {
+      const amount = parseFloat(document.getElementById('amount').value);
+      if (!isNaN(amount) && amount > 0) {
+        currentBalance += amount;
+        updateBalance();
+        document.getElementById('amount').value = '';
+      }
+    }
+
+    function withdraw() {
+      const amount = parseFloat(document.getElementById('amount').value);
+      if (!isNaN(amount) && amount > 0 && amount <= currentBalance) {
+        currentBalance -= amount;
+        updateBalance();
+        document.getElementById('amount').value = '';
+      }
+    }
+
+    updateBalance();
+  </script>
+</body>
+</html>
