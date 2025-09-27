@@ -20,7 +20,9 @@ Build a RESTful API using Express.js to manage a collection of playing cards. Th
 
 ## Step 2: Postman Screenshot
 <img width="510" height="492" alt="image" src="https://github.com/user-attachments/assets/febda3ba-d06a-4aeb-ac90-6d85ffe32d5a" />
+
 <img width="510" height="483" alt="image" src="https://github.com/user-attachments/assets/2e249d24-5042-4290-a79b-1776b982353d" />
+
 <img width="497" height="505" alt="image" src="https://github.com/user-attachments/assets/ca8ce6ae-23de-459a-9ae9-1cdb2cbf4ad4" />
 
 
