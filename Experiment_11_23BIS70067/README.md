@@ -14,10 +14,3 @@ Build a RESTful API using Express.js to manage a collection of playing cards. Th
 ## Prerequisites
 - Node.js installed
 - npm (Node Package Manager)
-
-## Step 1: Execute index.js
-![Running](res3.png)
-
-## Step 2: Postman Screenshot
-![Running](res2.png)
-![Running](res1.png)
