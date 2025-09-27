@@ -32,7 +32,7 @@ This project helps you understand:
 ### Step 1: Run the Server
 ```bash
 node index.js
-
+```
 <img width="546" height="115" alt="image" src="https://github.com/user-attachments/assets/797eea73-6f4e-4dc2-8aac-fd253f2ac756" />
 
 ### Step 2: Postman Screenshots:
